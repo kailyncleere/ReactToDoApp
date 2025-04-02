@@ -90,7 +90,7 @@ function ToDoList() {
     // Actual display of the to-do list
     return (
         <div>
-            <h1 className='TitleH1'>To-Do List <img src="/logo.png" alt="Logo" /></h1>
+            <h1 className='TitleH1'>To-Do List <img src={process.env.PUBLIC_URL + "/logo.png"} alt="Logo" /></h1>
             <ToDoForm onSubmit={AddToDo} />
             <div>
                 <button className="FilterBtn" onClick={() => setFilter('all')}>All</button>
