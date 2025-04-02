@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: verdana, sans-serif;
 }
 
@@ -14,13 +13,13 @@
   border: none;
   outline: none;
   padding: 6px 15px;
-  
   background: #5d0174;
   color: #fff;
   font-size: 12px;
   cursor: pointer;
   border-radius: 40px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .icons {
@@ -46,15 +45,26 @@
   stroke-width: .75px;
 }
 
-.ToDo-Form .ToDo-Button {
+
+.ToDo-Button {
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  margin: 0;
+  z-index: 1;
+  height: 40px;
   border: none;
   outline: none;
-  padding: 0 30px;
   background: #5d0174;
   color: #fff;
   font-size: 14px;
   cursor: pointer;
   border-radius: 30px;
+  flex-shrink: 0;
+  margin-left: -1px;
 }
 
 
@@ -69,6 +79,31 @@
   background-color: rgba(105, 105, 105, 0.034);
   border-radius: 30px;
 } 
+
+.ToDo-Form {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+.ToDo-Input {
+  position: relative;
+  flex-grow: 1;
+  height: 40px;
+}
+
+.ToDo-Input input {
+  width: 100%;
+  padding: 10px 120px 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background: #edeef0;
+  font-size: 14px;
+  box-sizing: border-box;
+  height: 40px;
+}
 
 .complete {
   text-decoration: line-through;
@@ -87,34 +122,6 @@
   width: 50px;
   height: auto;
   margin-left: 10px;
-}
-
-.ToDo-Form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.ToDo-Input {
-  display: flex;
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 14px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #edeef0;
-  border-radius: 30px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-}
-
-.ToDo-Input input {
-  padding: 0px 10px;
 }
 
 .body {

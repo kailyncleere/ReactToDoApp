@@ -13,7 +13,7 @@ function ToDoForm(props) {
         inputRef.current.focus();
     }, []);
 
-    // Updates the input value when the user types in the input field
+    // Updates the input value when typed in the input field
     const HandleChange = e => {
         setInput(e.target.value);
     };
@@ -39,11 +39,10 @@ function ToDoForm(props) {
                     placeholder={props.edit ? 'Update your item' : 'Add a task'}
                     value={input}
                     name="text"
-                    className="ToDo-Input"
                     onChange={HandleChange}
                     ref={inputRef}
                 />
-                <button className="ToDo-Button">{props.edit ? 'Update' : 'Add Task'}</button>
+            <button className="ToDo-Button">{props.edit ? 'Update' : 'Add Task'}</button>
             </div>
         </form>
     );
