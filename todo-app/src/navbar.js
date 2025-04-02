@@ -1,12 +1,12 @@
-import './navbar.css';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
-    return (
-        <nav className="navbar">
-            <ul>
-                <li><a href="/todo" className="NavHome">To-Do List</a></li>
-                <li><a href="/contact" className="NavContact">Contact</a></li>
-            </ul>
-        </nav>
-    );
+  return (
+    <nav className="navbar">
+      <ul>
+        <li><Link to="/" className="NavHome">To-Do List</Link></li>
+        <li><Link to="/contact" className="NavContact">Contact</Link></li>
+      </ul>
+    </nav>
+  );
 }

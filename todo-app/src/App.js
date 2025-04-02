@@ -3,26 +3,20 @@ import ToDoForm from './components/ToDoForm';
 import ToDoList from './components/ToDoList';
 import Navbar from './navbar';
 import Contact from './contact';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
-let component
-  switch (window.location.pathname) {
-    case '/':
-      component = <ToDoList />;
-      break;
-    case '/contact':
-      component = <Contact />;
-      break;
-    default:
-      component = <ToDoList />;
-  }
   return (
     <div className="body">
-      {}
-      <Navbar />
-    <div className="Container">
-    {component} {}
-    </div>
+      <Router basename={process.env.PUBLIC_URL}>
+        <Navbar />
+        <div className="Container">
+          <Routes>
+            <Route path="/" element={<ToDoList />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
