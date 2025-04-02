@@ -38,12 +38,12 @@ function ToDoForm(props) {
                     type="text"
                     placeholder={props.edit ? 'Update your item' : 'Add a task'}
                     value={input}
-                    name='text'
-                    className='ToDo-Input'
+                    name="text"
+                    className="ToDo-Input"
                     onChange={HandleChange}
                     ref={inputRef}
                 />
-                <button className='ToDo-Button'>{props.edit ? 'Update' : 'Add Task'}</button>
+                <button className="ToDo-Button">{props.edit ? 'Update' : 'Add Task'}</button>
             </div>
         </form>
     );

@@ -49,7 +49,7 @@
 .ToDo-Form .ToDo-Button {
   border: none;
   outline: none;
-  padding: 8px 30px;
+  padding: 0 30px;
   background: #5d0174;
   color: #fff;
   font-size: 14px;
@@ -114,7 +114,7 @@
 }
 
 .ToDo-Input input {
-  padding: 10px 0px 0px 10px;
+  padding: 0px 10px;
 }
 
 .body {
